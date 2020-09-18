@@ -8,21 +8,25 @@ const PromoItem = () =>{
                 image={{uri : "https://www.javatravel.net/wp-content/uploads/2020/01/Minuman-Makanan-Khas-Tegal.jpg"}}
                 text="Makanan Khas tegal"
                 diskon= "Diskon 70%"
+                masaberlaku="until 20 September"
             />  
             <PromoItemSub
                 image={{uri : "https://www.javatravel.net/wp-content/uploads/2020/01/Minuman-Makanan-Khas-Tegal.jpg"}}
                 text="Makanan Khas tegal"
                 diskon= "Diskon 50%"
+                masaberlaku="until 20 September"
             />  
             <PromoItemSub
                 image={{uri : "https://www.javatravel.net/wp-content/uploads/2020/01/Minuman-Makanan-Khas-Tegal.jpg"}}
                 text="Makanan Khas tegal"
                 diskon= "Diskon 30%"
+                masaberlaku="until 20 September"
             />  
             <PromoItemSub
                 image={{uri : "https://www.javatravel.net/wp-content/uploads/2020/01/Minuman-Makanan-Khas-Tegal.jpg"}}
                 text="Makanan Khas tegal"
                 diskon= "Diskon 40%"
+                masaberlaku="until 20 September"
             />       
         </View>
     )

@@ -30,6 +30,7 @@ class FiturUtamaSub extends React.Component{
             <View style={{width: '25%', alignItems: 'center'}}>
                 <Image style={styles.imageFiturUtama} source={this.props.image}/>
                  <Text style={styles.textFeatureUtama}>{this.props.title}</Text>
+                 
         </View>
         )
     }
