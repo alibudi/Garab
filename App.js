@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, Dimensions, StyleSheet, StatusBar} from 'react-native';
+import {View, Text, Image, Dimensions, StyleSheet, StatusBar, ScrollView} from 'react-native';
 import imgBanner from './source/assets/images/awan.jpg'
 import OvoComponent from './source/component/OvoComponent'
 import FiturUtama from './source/component/FiturUtama'
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 class Home extends Component{
   render(){
     return (
-      <View>
+      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
         <StatusBar barStyle="dark-content" translucent backgroundColor="rgba(0,0,0,0)"/>
         <Image style={styles.imageBanner} source={imgBanner}/>
         <Text style={styles.greetingText}>Selamat Siang</Text>
@@ -65,7 +65,7 @@ class Home extends Component{
           </View>
         <View style={styles.divider}></View>
            <PromoItem/>
-      </View>
+      </ScrollView>
     )
   }
 }
