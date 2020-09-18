@@ -1,42 +1,27 @@
 import React from 'react'
 import {Text, Image, View, StyleSheet} from 'react-native'
-
+import FiturUtamaSub from './FiturUtamaSub'
 const styles = StyleSheet.create({
     wrapperFiturUtama:{
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginTop: 15
-    },
-    imageFiturUtama:{
-      height: 55,
-      width: 55,
-      marginTop: 10,
-    },
-    textFeatureUtama:{
-        textAlign: 'center',
-        marginTop: 4,
+      marginTop: 15,
+      flexWrap: 'wrap',
+      width: '100%'
     }
   })
 
 const FiturUtama = () => {
     return (
        <View style={styles.wrapperFiturUtama}>
-           <View>
-               <Image style={styles.imageFiturUtama} source={require('../assets/icon/food.jpg')}/>
-               <Text style={styles.textFeatureUtama}>Food</Text>
-           </View>
-           <View>
-               <Image style={styles.imageFiturUtama} source={require('../assets/icon/bike.jpg')}/>
-               <Text style={styles.textFeatureUtama}>Bike</Text>
-           </View>
-           <View>
-               <Image style={styles.imageFiturUtama} source={require('../assets/icon/car.jpg')}/>
-               <Text style={styles.textFeatureUtama}>Car</Text>
-           </View>
-           <View>
-               <Image style={styles.imageFiturUtama} source={require('../assets/icon/send.jpg')}/>
-               <Text style={styles.textFeatureUtama}>Delivery</Text>
-           </View>
+           <FiturUtamaSub image={require('../assets/icon/food.jpg')} title="Food"/>
+           <FiturUtamaSub image={require('../assets/icon/bike.jpg')} title="Bike"/>
+           <FiturUtamaSub image={require('../assets/icon/car.jpg')} title="Car"/>
+           <FiturUtamaSub image={require('../assets/icon/send.jpg')} title="Delivery"/>
+           <FiturUtamaSub image={require('../assets/icon/subscribe.jpg')} title="Food"/>
+           <FiturUtamaSub image={require('../assets/icon/doctor.jpg')} title="Bike"/>
+           <FiturUtamaSub image={require('../assets/icon/pulsa.jpg')} title="Car"/>
+           <FiturUtamaSub image={require('../assets/icon/more.jpg')} title="Delivery"/>
        </View>
     )
 }

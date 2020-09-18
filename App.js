@@ -3,6 +3,8 @@ import {View, Text, Image, Dimensions, StyleSheet, StatusBar} from 'react-native
 import imgBanner from './source/assets/images/awan.jpg'
 import OvoComponent from './source/component/OvoComponent'
 import FiturUtama from './source/component/FiturUtama'
+import PromoItem from './source/component/PromoItem'
+
 const {height,width} = Dimensions.get('window')
 const styles = StyleSheet.create({
   imageBanner: {
@@ -24,7 +26,6 @@ const styles = StyleSheet.create({
     elevation: 4,
     borderRadius: 10
   },
-
   textovo:{
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -36,6 +37,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#adadad',
     marginTop: 10,
   },
+  divider: {
+    width: width,
+    height: 15,
+    backgroundColor: '#ededed',
+    marginVertical: 15
+  }
 })
 class Home extends Component{
   render(){
@@ -51,10 +58,13 @@ class Home extends Component{
           </View>
           <View style={styles.gerisOvo}></View>
           <OvoComponent/>
-          <View>
+         
+        </View>
+        <View style={{marginHorizontal: 18}}>
               <FiturUtama/>
           </View>
-        </View>
+        <View style={styles.divider}></View>
+           <PromoItem/>
       </View>
     )
   }
