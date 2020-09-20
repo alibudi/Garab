@@ -12,10 +12,19 @@ const Stack = createStackNavigator();
 
 const HomeStack = () => 
     <Stack.Navigator 
-        headerMode="none"
+        // headerMode="none"
         >
-            <Stack.Screen name="Home" component={ButtomTabs}/>
-            <Stack.Screen name="Food" component={Food}/>
+            <Stack.Screen name="Home" component={ButtomTabs}
+            options={
+                {
+                    title: "Home",
+                    headerShown: false
+                }
+            }
+            />
+            <Stack.Screen name="Food" component={Food}
+                options={{title:"Food ", headerShown: true}}
+            />
         </Stack.Navigator>
         
 
