@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text, Image, View, StyleSheet} from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const styles = StyleSheet.create({
     imageFiturUtama:{
@@ -27,11 +28,11 @@ const styles = StyleSheet.create({
 class FiturUtamaSub extends React.Component{
     render(){
         return (
-            <View style={{width: '25%', alignItems: 'center'}}>
+            <TouchableOpacity onPress={this.props.onPress} style={{width: '25%', alignItems: 'center'}}>
                 <Image style={styles.imageFiturUtama} source={this.props.image}/>
                  <Text style={styles.textFeatureUtama}>{this.props.title}</Text>
                  
-        </View>
+        </TouchableOpacity>
         )
     }
 }
