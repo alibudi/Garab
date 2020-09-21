@@ -6,13 +6,14 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 
 
-import {Home, Activity, Account, Inbox, Payment, Food} from '../../page'
+import {Home, Activity, Account, Inbox, Payment, Food, Login} from '../../page'
 const MaterialBottom = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const HomeStack = () => 
     <Stack.Navigator 
         // headerMode="none"
+        initialRouteName="Login"
         >
             <Stack.Screen name="Home" component={ButtomTabs}
             options={
@@ -24,6 +25,9 @@ const HomeStack = () =>
             />
             <Stack.Screen name="Food" component={Food}
                 options={{title:"Food ", headerShown: true}}
+            />
+            <Stack.Screen name="Login" component={Login}
+                options={{title:"Login ", headerShown: false}}
             />
         </Stack.Navigator>
         
